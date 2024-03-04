@@ -1,0 +1,17 @@
+server:
+  port: 8083
+  
+spring:
+  application:
+    name: gateway   
+  cloud:
+    gateway:
+      routes:
+      - id: user
+        uri: lb://user
+        predicates:
+        - Path=/user/**
+      - id: product
+        uri: lb://product
+        predicates:
+        - Path=/product/**

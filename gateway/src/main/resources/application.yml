@@ -1,9 +1,9 @@
 server:
   port: 8083
-  
+
 spring:
   application:
-    name: gateway   
+    name: gateway
   cloud:
     gateway:
       routes:
@@ -15,3 +15,4 @@ spring:
         uri: lb://product
         predicates:
         - Path=/product/**
+

@@ -1,7 +1,10 @@
+
 FROM openjdk:17
 
-COPY target/productservice.jar /user/app/
+# Set the working directory inside the container
+EXPOSE 8082
 
-WORKDIR /user/app/
+ADD /target/productservice.jar productservice.jar
 
+# Command to run your Gateway service when the container starts
 ENTRYPOINT ["java", "-jar", "productservice.jar"]

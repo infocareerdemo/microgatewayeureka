@@ -1,4 +1,4 @@
-package com.example.product;
+/*package com.example.product;
 
 import java.io.IOException;
 
@@ -34,4 +34,4 @@ public class GatewayCheckFilter implements Filter {
 		String forwardedHost = request.getHeader("X-Forwarded-Host");
 		return (forwardedHost != null && !forwardedHost.isEmpty());
 	}
-}
+}*/

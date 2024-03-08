@@ -7,12 +7,16 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: user
-        uri: lb://user
-        predicates:
-        - Path=/user/**
-      - id: product
-        uri: lb://product
-        predicates:
-        - Path=/product/**
+        - id: user
+          uri: lb://user
+          predicates:
+            - Path=/user/**
+        - id: product
+          uri: lb://product
+          predicates:
+            - Path=/product/**
+#eureka:
+ # client:
+  #  serviceUrl:
+    #  defaultZone: http://eureka-server-service:8761/eureka/
 

@@ -1,7 +1,11 @@
+
+
 FROM openjdk:17
 
-COPY target/userservice.jar /user/app/
+# Set the working directory inside the container
+EXPOSE 8081
 
-WORKDIR /user/app/
+ADD /target/userservice.jar userservice.jar
 
+# Command to run your Gateway service when the container starts
 ENTRYPOINT ["java", "-jar", "userservice.jar"]
